@@ -21,7 +21,7 @@ public class MedicsActivity extends AppCompatActivity {
     protected void onCreate(Bundle saveInstanceState){
         super.onCreate(saveInstanceState);
         setContentView(R.layout.activity_medics);
-        mIdTipo = getIntent().getStringExtra(MedicsClasification.EXTRA_TIPO_MEDICS);
+        mIdTipo = getIntent().getStringExtra(MedicsClasification.EXTRA_TIPO_MEDICS_ID);
         setToolbar();
 
         setTitle("1111111");

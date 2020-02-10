@@ -1,14 +1,19 @@
 package com.example.dbfarmmedic.Medics;
 
+import android.content.Intent;
+import android.database.Cursor;
+import android.os.AsyncTask;
 import android.os.Bundle;
 import android.text.Layout;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.AdapterView;
 import android.widget.ListView;
 
 import androidx.fragment.app.Fragment;
 
+import com.example.dbfarmmedic.DataMedic.MedicsContract;
 import com.example.dbfarmmedic.DataMedic.MedicsDbHelper;
 import com.example.dbfarmmedic.R;
 
@@ -47,6 +52,54 @@ public class MedicsFragment extends Fragment {
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState){
         View root = inflater.inflate(R.layout.fragment_medics, container, false);
 
+        mMedicsList = (ListView) root.findViewById(R.id.archive_xml);
+        mMedicsAdapter = new MedicsCursorAdapter(getActivity(), null);
 
+        mMedicsList.setAdapter(mMedicsAdapter);
+
+        mMedicsList.setOnItemClickListener(new AdapterView.OnItemClickListener() {
+            @Override
+            public void onItemClick(AdapterView<?> adapterView, View view, int i, long 1) {
+                Cursor currentItem = (Cursor) mMedicsAdapter.getItem(i);
+                String currentMedicsId = currentItem.getString(
+                        currentItem.getColumnIndex(MedicsContract.MedicsEntry.ID));
+
+                        showDetailScreen(currentMedicsId);
+
+            }
+        });
+
+        getActivity().deleteDatabase(MedicsDbHelper.DATABASE_NAME);
+
+        mMedicsDbHelper = new MedicsDbHelper(getActivity());
+
+        loadLawyers();
+        return root;
+    }
+
+    private void loadLawyers() { new LawyersLoadTask().execute();}
+
+    private void showDetailScreen (String lawyerId){
+        Intent intent = new Intent(getActivity(), MedicsDetalleActivity.class);
+        intent.putExtra(MedicsActivity.EXTRA_MEDICS_ID, lawyerId);
+        startActivityForResult(intent, REQUEST_UPDATE_DELETE_MEDICS);
+
+    }
+
+    private class LawyersLoadTask extends AsyncTask<Void, Void, Cursor> {
+
+        @Override
+        protected Cursor doInBackground(Void... voids){
+            return mMedicsDbHelper.getAllLawyers(mIdTipo);
+        }
+
+        @Override
+        protected void onPostExecute(Cursor cursor){
+            if (cursor != null && cursor.getCount() > 0) {
+                mMedicsAdapter.swapCursor(cursor);
+            }else {
+
+            }
+        }
     }
 }
