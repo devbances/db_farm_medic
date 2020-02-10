@@ -28,14 +28,29 @@ public class MedicsDetailFragmentActivity extends Fragment {
 
     private CollapsibleActionView mCollapsingView;
     private ImageView mAvatar;
-    private TextView mProteinas;
-    private TextView mPeso;
-    private TextView mEnergy;
-    private TextView mLipidos;
-    private TextView mCarb;
-    private TextView mFibCrud;
-    private TextView mFibDiet;
-
+    private TextView mNameGeneric;
+    private TextView mNameEcomerce;
+    private TextView mPresentation;
+    private TextView mGroupFarmaco;
+    private TextView mGroupTerapics;
+    private TextView mRiskPregnancy;
+    private TextView mMecanicsAction;
+    private TextView mCycleLife;
+    private TextView mAbsortion;
+    private TextView mDistribution;
+    private TextView mMetabolic;
+    private TextView mExcretion;
+    private TextView mIndications;
+    private TextView mContradictions;
+    private TextView mCv;
+    private TextView mDerma;
+    private TextView mGi;
+    private TextView mNeuro;
+    private TextView mGu;
+    private TextView mOrl;
+    private TextView mOthers;
+    private TextView mInteractionMedics;
+    private TextView mCareNursing;
 
     private MedicsDbHelper mMedicsDbHelper;
 
@@ -68,15 +83,34 @@ public class MedicsDetailFragmentActivity extends Fragment {
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
         View root = inflater.inflate(R.layout.fragment_medics_details, container, false);
-        mCollapsingView = (CollapsingToolbarLayout) getActivity().findViewById(R.id.toolbar_layout);
+        mCollapsingView = (mCollapsingView) getActivity().findViewById(R.id.toolbar_layout);
         mAvatar = (ImageView) getActivity().findViewById(R.id.iv_avatar);
-        mPeso = (TextView) root.findViewById(R.id.tv_peso);
-        mProteinas = (TextView) root.findViewById(R.id.tv_proteinas);
-        mEnergy = (TextView) root.findViewById(R.id.tv_energy);
-        mLipidos = (TextView) root.findViewById(R.id.tv_lipidos);
-        mCarb = (TextView) root.findViewById(R.id.tv_carb);
-        mFibCrud = (TextView) root.findViewById(R.id.tv_fibCrud);
-        mFibDiet = (TextView) root.findViewById(R.id.tv_fibDiet);
+
+        mNameGeneric = (TextView) root.findViewById(R.id.tv_peso);
+        mNameEcomerce = (TextView) root.findViewById(R.id.tv_proteinas);
+        mPresentation = (TextView) root.findViewById(R.id.tv_energy);
+        mGroupFarmaco = (TextView) root.findViewById(R.id.tv_lipidos);
+        mGroupTerapics = (TextView) root.findViewById(R.id.tv_carb);
+        mRiskPregnancy = (TextView) root.findViewById(R.id.tv_fibCrud);
+        mMecanicsAction = (TextView) root.findViewById(R.id.tv_fibDiet);
+        mCycleLife = (TextView) root.findViewById(R.id.tv_fibDiet);
+        mAbsortion = (TextView) root.findViewById(R.id.tv_fibDiet);
+        mDistribution = (TextView) root.findViewById(R.id.tv_fibDiet);
+        mMetabolic = (TextView) root.findViewById(R.id.tv_fibDiet);
+        mExcretion = (TextView) root.findViewById(R.id.tv_fibDiet);
+        mIndications = (TextView) root.findViewById(R.id.tv_fibDiet);
+        mContradictions = (TextView) root.findViewById(R.id.tv_fibDiet);
+        mCv = (TextView) root.findViewById(R.id.tv_fibDiet);
+        mDerma = (TextView) root.findViewById(R.id.tv_fibDiet);
+        mGi = (TextView) root.findViewById(R.id.tv_fibDiet);
+        mNeuro = (TextView) root.findViewById(R.id.tv_fibDiet);
+        mGu = (TextView) root.findViewById(R.id.tv_fibDiet);
+        mOrl = (TextView) root.findViewById(R.id.tv_fibDiet);
+        mOthers = (TextView) root.findViewById(R.id.tv_fibDiet);
+        mInteractionMedics = (TextView) root.findViewById(R.id.tv_fibDiet);
+        mCareNursing = (TextView) root.findViewById(R.id.tv_fibDiet);
+
+
 
         mMedicsDbHelper = new MedicsDbHelper(getActivity());
 
@@ -107,13 +141,30 @@ public class MedicsDetailFragmentActivity extends Fragment {
                 .load(Uri.parse("file:///android_asset/" + medics.getAvatarUri()))
                 .centerCrop()
                 .into(mAvatar);
-        mPeso.setText(medics.getPeso());
-        mProteinas.setText(medics.getProteinas());
-        mEnergy.setText(medics.getEnergy());
-        mLipidos.setText(medics.getLipidos());
-        mCarb.setText(medics.getCarb());
-        mFibCrud.setText(medics.getFibCrud());
-        mFibDiet.setText(medics.getFibDiet());
+
+        mNameGeneric.setText(medics.getNameGeneric());
+        mNameEcomerce.setText(medics.getProteinas());
+        mPresentation.setText(medics.getEnergy());
+        mGroupFarmaco.setText(medics.getLipidos());
+        mGroupTerapics.setText(medics.getCarb());
+        mRiskPregnancy.setText(medics.getFibCrud());
+        mMecanicsAction.setText(medics.getFibDiet());
+        mCycleLife.setText(medics.getFibDiet());
+        mAbsortion.setText(medics.getFibDiet());
+        mDistribution.setText(medics.getFibDiet());
+        mMetabolic.setText(medics.getMetabolic());
+        mExcretion.setText(medics.getFibDiet());
+        mIndications.setText(medics.getFibDiet());
+        mContradictions.setText(medics.getFibDiet());
+        mCv.setText(medics.getFibDiet());
+        mDerma.setText(medics.getFibDiet());
+        mGi.setText(medics.getFibDiet());
+        mNeuro.setText(medics.getFibDiet());
+        mGu.setText(medics.getFibDiet());
+        mOrl.setText(medics.getFibDiet());
+        mOthers.setText(medics.getFibDiet());
+        mInteractionMedics.setText(medics.getFibDiet());
+        mCareNursing.setText(medics.getFibDiet());
     }
 
     private void showLoadError() {

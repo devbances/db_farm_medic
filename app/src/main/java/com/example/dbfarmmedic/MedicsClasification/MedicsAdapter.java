@@ -38,7 +38,7 @@ public class MedicsAdapter extends BaseAdapter {
         if (view == null) {
             LayoutInflater inflater = (LayoutInflater) context
                     .getSystemService(Context.LAYOUT_INFLATER_SERVICE);
-            view = inflater.inflate(R.layout.grid_item_clasificacion_medics, viewGroup, false);
+            view = inflater.inflate(R.layout.grid_item_clasification_medics, viewGroup, false);
         }
 
         ImageView imagenCoche = (ImageView) view.findViewById(R.id.imagen_grupo_medics);
