@@ -1,6 +1,7 @@
 package com.example.dbfarmmedic.DataMedic;
 
 import android.content.Context;
+import android.database.Cursor;
 import android.database.sqlite.SQLiteDatabase;
 import android.database.sqlite.SQLiteOpenHelper;
 
@@ -83,5 +84,31 @@ public class MedicsDbHelper extends SQLiteOpenHelper {
                 MedicsContract.MedicsEntry.TABLE_NAME,
                 null,
                 medicsData.toContentValues());
+    }
+    public Cursor getAllLawyers(String tipoId) {
+        return getReadableDatabase()
+                .query(
+                        MedicsContract.MedicsEntry.TABLE_NAME,
+                        null,
+                        MedicsContract.MedicsEntry.GROUP_MEDICS + " LIKE ?",
+                        new String[]{tipoId},
+                        null,
+                        null,
+                        null,
+                        null);
+
+    }
+
+    public Cursor getLawyerById(String lawyerId) {
+        Cursor c = getReadableDatabase().query(
+                MedicsContract.MedicsEntry.TABLE_NAME,
+                null,
+                MedicsContract.MedicsEntry.ID + " LIKE ?",
+                new String[]{lawyerId},
+                null,
+                null,
+                null,
+                null);
+        return c;
     }
 }

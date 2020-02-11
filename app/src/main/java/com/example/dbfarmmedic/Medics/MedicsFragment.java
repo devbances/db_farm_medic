@@ -15,6 +15,7 @@ import androidx.fragment.app.Fragment;
 
 import com.example.dbfarmmedic.DataMedic.MedicsContract;
 import com.example.dbfarmmedic.DataMedic.MedicsDbHelper;
+import com.example.dbfarmmedic.MedicsDetail.MedicsDetailActivity;
 import com.example.dbfarmmedic.R;
 
 public class MedicsFragment extends Fragment {
@@ -49,23 +50,24 @@ public class MedicsFragment extends Fragment {
     }
 
     @Override
-    public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState){
+    public View onCreateView(LayoutInflater inflater, ViewGroup container,
+                             Bundle savedInstanceState){
         View root = inflater.inflate(R.layout.fragment_medics, container, false);
 
-        mMedicsList = (ListView) root.findViewById(R.id.archive_xml);
+        mMedicsList = (ListView) root.findViewById(R.id.lawyer_list);
         mMedicsAdapter = new MedicsCursorAdapter(getActivity(), null);
 
         mMedicsList.setAdapter(mMedicsAdapter);
 
+        //revisar actualizacion, se cambio int i x int position y long l x long id
+
         mMedicsList.setOnItemClickListener(new AdapterView.OnItemClickListener() {
             @Override
-            public void onItemClick(AdapterView<?> adapterView, View view, int i, long 1) {
-                Cursor currentItem = (Cursor) mMedicsAdapter.getItem(i);
+            public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
+                Cursor currentItem = (Cursor) mMedicsAdapter.getItem(position);
                 String currentMedicsId = currentItem.getString(
                         currentItem.getColumnIndex(MedicsContract.MedicsEntry.ID));
-
-                        showDetailScreen(currentMedicsId);
-
+                showDetailScreen(currentMedicsId);
             }
         });
 
@@ -80,7 +82,7 @@ public class MedicsFragment extends Fragment {
     private void loadLawyers() { new LawyersLoadTask().execute();}
 
     private void showDetailScreen (String lawyerId){
-        Intent intent = new Intent(getActivity(), MedicsDetalleActivity.class);
+        Intent intent = new Intent(getActivity(), MedicsDetailActivity.class);
         intent.putExtra(MedicsActivity.EXTRA_MEDICS_ID, lawyerId);
         startActivityForResult(intent, REQUEST_UPDATE_DELETE_MEDICS);
 

@@ -8,7 +8,7 @@
     android:fitsSystemWindows="true"
     tools:context=".Medics.MedicsActivity">
 
-    <include layout="@"/>
+    <include layout="@layout/content_medics"/>
 
     <com.google.android.material.appbar.AppBarLayout
         android:id="@+id/appbar"

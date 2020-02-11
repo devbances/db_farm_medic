@@ -86,29 +86,29 @@ public class MedicsDetailFragmentActivity extends Fragment {
         mCollapsingView = (mCollapsingView) getActivity().findViewById(R.id.toolbar_layout);
         mAvatar = (ImageView) getActivity().findViewById(R.id.iv_avatar);
 
-        mNameGeneric = (TextView) root.findViewById(R.id.tv_peso);
-        mNameEcomerce = (TextView) root.findViewById(R.id.tv_proteinas);
-        mPresentation = (TextView) root.findViewById(R.id.tv_energy);
-        mGroupFarmaco = (TextView) root.findViewById(R.id.tv_lipidos);
-        mGroupTerapics = (TextView) root.findViewById(R.id.tv_carb);
-        mRiskPregnancy = (TextView) root.findViewById(R.id.tv_fibCrud);
-        mMecanicsAction = (TextView) root.findViewById(R.id.tv_fibDiet);
-        mCycleLife = (TextView) root.findViewById(R.id.tv_fibDiet);
-        mAbsortion = (TextView) root.findViewById(R.id.tv_fibDiet);
-        mDistribution = (TextView) root.findViewById(R.id.tv_fibDiet);
-        mMetabolic = (TextView) root.findViewById(R.id.tv_fibDiet);
-        mExcretion = (TextView) root.findViewById(R.id.tv_fibDiet);
-        mIndications = (TextView) root.findViewById(R.id.tv_fibDiet);
-        mContradictions = (TextView) root.findViewById(R.id.tv_fibDiet);
-        mCv = (TextView) root.findViewById(R.id.tv_fibDiet);
-        mDerma = (TextView) root.findViewById(R.id.tv_fibDiet);
-        mGi = (TextView) root.findViewById(R.id.tv_fibDiet);
-        mNeuro = (TextView) root.findViewById(R.id.tv_fibDiet);
-        mGu = (TextView) root.findViewById(R.id.tv_fibDiet);
-        mOrl = (TextView) root.findViewById(R.id.tv_fibDiet);
-        mOthers = (TextView) root.findViewById(R.id.tv_fibDiet);
-        mInteractionMedics = (TextView) root.findViewById(R.id.tv_fibDiet);
-        mCareNursing = (TextView) root.findViewById(R.id.tv_fibDiet);
+        mNameGeneric = (TextView) root.findViewById(R.id.tv_name);
+        mNameEcomerce = (TextView) root.findViewById(R.id.tv_nameEcomerce);
+        mPresentation = (TextView) root.findViewById(R.id.tv_presentation);
+        mGroupFarmaco = (TextView) root.findViewById(R.id.tv_groupFarmaco);
+        mGroupTerapics = (TextView) root.findViewById(R.id.tv_GroupTerapics);
+        mRiskPregnancy = (TextView) root.findViewById(R.id.tv_RiskPregnancy);
+        mMecanicsAction = (TextView) root.findViewById(R.id.tv_MecanicsAction);
+        mCycleLife = (TextView) root.findViewById(R.id.tv_CycleLife);
+        mAbsortion = (TextView) root.findViewById(R.id.tv_Absortion);
+        mDistribution = (TextView) root.findViewById(R.id.tv_Distribution);
+        mMetabolic = (TextView) root.findViewById(R.id.tv_Metabolic);
+        mExcretion = (TextView) root.findViewById(R.id.tv_Excretion);
+        mIndications = (TextView) root.findViewById(R.id.tv_Indications);
+        mContradictions = (TextView) root.findViewById(R.id.tv_Contradictions);
+        mCv = (TextView) root.findViewById(R.id.tv_cv);
+        mDerma = (TextView) root.findViewById(R.id.tv_derma);
+        mGi = (TextView) root.findViewById(R.id.tv_gi);
+        mNeuro = (TextView) root.findViewById(R.id.tv_Neuro);
+        mGu = (TextView) root.findViewById(R.id.tv_gu);
+        mOrl = (TextView) root.findViewById(R.id.tv_Orl);
+        mOthers = (TextView) root.findViewById(R.id.tv_Others);
+        mInteractionMedics = (TextView) root.findViewById(R.id.tv_InteractionMedics);
+        mCareNursing = (TextView) root.findViewById(R.id.tv_CareNursing);
 
 
 
@@ -136,13 +136,13 @@ public class MedicsDetailFragmentActivity extends Fragment {
 
 
     private void showLawyer(Medics medics) {
-        mCollapsingView.setTitle(medics.getName());
+        mCollapsingView.setTitle(medics.getNombre());
         Glide.with(this)
-                .load(Uri.parse("file:///android_asset/" + medics.getAvatarUri()))
+                .load(Uri.parse("file:///android_asset/" + medics.getIdDrawable()))
                 .centerCrop()
                 .into(mAvatar);
 
-        mNameGeneric.setText(medics.getNameGeneric());
+        mNameGeneric.setText(medics.getNombre());
         mNameEcomerce.setText(medics.getProteinas());
         mPresentation.setText(medics.getEnergy());
         mGroupFarmaco.setText(medics.getLipidos());

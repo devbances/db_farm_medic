@@ -1,9 +1,9 @@
 package com.example.dbfarmmedic.MedicsDetail;
 
 import android.os.Bundle;
-import android.widget.Toolbar;
 
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.appcompat.widget.Toolbar;
 import com.example.dbfarmmedic.Medics.MedicsActivity;
 import com.example.dbfarmmedic.R;
 
@@ -13,7 +13,7 @@ public class MedicsDetailActivity  extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_medics_detail);
-        Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
+        Toolbar toolbar = findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
         getSupportActionBar().setDisplayHomeAsUpEnabled(true);
 

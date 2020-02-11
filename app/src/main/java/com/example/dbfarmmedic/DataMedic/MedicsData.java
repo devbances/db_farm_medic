@@ -10,7 +10,7 @@ import java.util.UUID;
 /**
 
 /**
- * Entidad "alimento"
+ * Entidad "medicamento"
  */
 public class MedicsData {
     private String id;
@@ -134,12 +134,8 @@ public class MedicsData {
         interactionMedics = cursor.getString(cursor.getColumnIndex(MedicsEntry.INTERACTION_MEDICS));
         careNursing = cursor.getString(cursor.getColumnIndex(MedicsEntry.CARE_NURSING));
 
-
-
-
-
-
     }
+
 
     public ContentValues toContentValues() {
         ContentValues values = new ContentValues();

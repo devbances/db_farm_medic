@@ -14,15 +14,16 @@ import android.widget.TextView;
 import androidx.core.graphics.drawable.RoundedBitmapDrawable;
 import androidx.core.graphics.drawable.RoundedBitmapDrawableFactory;
 
-import com.example.dbfarmmedic.DataMedic.MedicsContract;
+
 import com.example.dbfarmmedic.R;
+import static com.example.dbfarmmedic.DataMedic.MedicsContract.MedicsEntry;
 
 public class MedicsCursorAdapter extends CursorAdapter {
     public MedicsCursorAdapter(Context context, Cursor c){
         super(context,c, 0);}
 
     @Override
-    public View newView(Context context, Cursor cursor, ViewGroup parent) {
+    public View newView(Context context, Cursor cursor, ViewGroup viewGroup) {
         LayoutInflater inflater = LayoutInflater.from(context);
 
         return inflater.inflate(R.layout.list_item_medics, viewGroup, false);
@@ -34,8 +35,8 @@ public class MedicsCursorAdapter extends CursorAdapter {
         TextView nameText = (TextView) view.findViewById(R.id.tv_name);
         final ImageView avatarImage = (ImageView) view.findViewById(R.id.iv_avatar);
 
-        String name = cursor.getString(cursor.getColumnIndex(MedicsContract.MedicsEntry.NAME_GENERIC));
-        String avatarUri = cursor.getString(cursor.getColumnIndex(MedicsContract.MedicsEntry.AVATAR_URI));
+        String name = cursor.getString(cursor.getColumnIndex(MedicsEntry.NAME_GENERIC));
+        String avatarUri = cursor.getString(cursor.getColumnIndex(MedicsEntry.AVATAR_URI));
 
         nameText.setText(name);
         Glide
