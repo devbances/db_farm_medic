@@ -57,7 +57,7 @@ public class MedicsDbHelper extends SQLiteOpenHelper {
     }
 
     private void mockData(SQLiteDatabase sqLiteDatabase){
-        mockLawyer(sqLiteDatabase, new MedicsData("11111", "222222","333333","44444","55555", "6666666","777777","8888888","999999", "10",
+        mockLawyer(sqLiteDatabase, new MedicsData("1", "antibioticos.jpg","333333","44444","55555", "6666666","777777","8888888","999999", "10",
                                                     "oooooo11","eeeeee12","eeeee13", "eeeeee14","eeeeeeee15","eeeeeeooooo16","qqqqq17", "ooooooo18","oooooo19","oooooo20",
                                                     "21", "22","23","24","25"));
 

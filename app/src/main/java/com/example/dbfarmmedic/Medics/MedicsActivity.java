@@ -32,7 +32,8 @@ public class MedicsActivity extends AppCompatActivity {
         if (fragment == null){
             fragment = MedicsFragment.newInstance(mIdTipo);
             getSupportFragmentManager()
-            .beginTransaction().add(R.id.medics_cner, fragment)
+            .beginTransaction()
+                    .add(R.id.medics_cner, fragment)
             .commit();
 
 

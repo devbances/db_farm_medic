@@ -54,7 +54,7 @@ public class MedicsFragment extends Fragment {
                              Bundle savedInstanceState){
         View root = inflater.inflate(R.layout.fragment_medics, container, false);
 
-        mMedicsList = (ListView) root.findViewById(R.id.lawyer_list);
+        mMedicsList =  root.findViewById(R.id.lawyer_list);
         mMedicsAdapter = new MedicsCursorAdapter(getActivity(), null);
 
         mMedicsList.setAdapter(mMedicsAdapter);

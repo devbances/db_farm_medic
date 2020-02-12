@@ -22,4 +22,12 @@
         android:textAppearance="?textAppearanceListItem"
         tools:text="Misael bances"/>
 
+    <ImageView
+        android:id="@+id/iv_avatar"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:layout_centerVertical="true"
+        android:scaleType="fitXY"
+        app:srcCompat="@drawable/ic_account_circle" />
+
 </RelativeLayout>

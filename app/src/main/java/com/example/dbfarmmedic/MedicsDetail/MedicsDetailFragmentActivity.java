@@ -16,19 +16,25 @@ import android.widget.Toast;
 
 import androidx.fragment.app.Fragment;
 
+import com.bumptech.glide.Glide;
+import com.bumptech.glide.annotation.GlideModule;
+import com.bumptech.glide.module.AppGlideModule;
+
+import com.example.dbfarmmedic.DataMedic.MedicsData;
 import com.example.dbfarmmedic.DataMedic.MedicsDbHelper;
 import com.example.dbfarmmedic.Medics.MedicsFragment;
 import com.example.dbfarmmedic.MedicsClasification.Medics;
 import com.example.dbfarmmedic.R;
+import com.google.android.material.appbar.CollapsingToolbarLayout;
 
 public class MedicsDetailFragmentActivity extends Fragment {
     private static final String ARG_LAWYER_ID = "lawyerId";
 
     private String mLawyerId;
 
-    private CollapsibleActionView mCollapsingView;
+    private CollapsingToolbarLayout mCollapsingView;
     private ImageView mAvatar;
-    private TextView mNameGeneric;
+    //private TextView mNameGeneric;
     private TextView mNameEcomerce;
     private TextView mPresentation;
     private TextView mGroupFarmaco;
@@ -83,10 +89,10 @@ public class MedicsDetailFragmentActivity extends Fragment {
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
         View root = inflater.inflate(R.layout.fragment_medics_details, container, false);
-        mCollapsingView = (mCollapsingView) getActivity().findViewById(R.id.toolbar_layout);
+        mCollapsingView = (CollapsingToolbarLayout) getActivity().findViewById(R.id.toolbar_layout);
         mAvatar = (ImageView) getActivity().findViewById(R.id.iv_avatar);
 
-        mNameGeneric = (TextView) root.findViewById(R.id.tv_name);
+        //mNameGeneric = (TextView) root.findViewById(R.id.tv_name);
         mNameEcomerce = (TextView) root.findViewById(R.id.tv_nameEcomerce);
         mPresentation = (TextView) root.findViewById(R.id.tv_presentation);
         mGroupFarmaco = (TextView) root.findViewById(R.id.tv_groupFarmaco);
@@ -135,36 +141,40 @@ public class MedicsDetailFragmentActivity extends Fragment {
     }
 
 
-    private void showLawyer(Medics medics) {
-        mCollapsingView.setTitle(medics.getNombre());
+    private void showLawyer(MedicsData medicsData) {
+        mCollapsingView.setTitle(medicsData.getNameGeneric());
         Glide.with(this)
-                .load(Uri.parse("file:///android_asset/" + medics.getIdDrawable()))
+                .load(Uri.parse("file:///android_asset/" + medicsData.getAvatarUri()))
                 .centerCrop()
                 .into(mAvatar);
 
-        mNameGeneric.setText(medics.getNombre());
-        mNameEcomerce.setText(medics.getProteinas());
-        mPresentation.setText(medics.getEnergy());
-        mGroupFarmaco.setText(medics.getLipidos());
-        mGroupTerapics.setText(medics.getCarb());
-        mRiskPregnancy.setText(medics.getFibCrud());
-        mMecanicsAction.setText(medics.getFibDiet());
-        mCycleLife.setText(medics.getFibDiet());
-        mAbsortion.setText(medics.getFibDiet());
-        mDistribution.setText(medics.getFibDiet());
-        mMetabolic.setText(medics.getMetabolic());
-        mExcretion.setText(medics.getFibDiet());
-        mIndications.setText(medics.getFibDiet());
-        mContradictions.setText(medics.getFibDiet());
-        mCv.setText(medics.getFibDiet());
-        mDerma.setText(medics.getFibDiet());
-        mGi.setText(medics.getFibDiet());
-        mNeuro.setText(medics.getFibDiet());
-        mGu.setText(medics.getFibDiet());
-        mOrl.setText(medics.getFibDiet());
-        mOthers.setText(medics.getFibDiet());
-        mInteractionMedics.setText(medics.getFibDiet());
-        mCareNursing.setText(medics.getFibDiet());
+        //mNameGeneric.setText(medicsData.getNombre());
+        mNameEcomerce.setText(medicsData.getNameEcomerce());
+        mPresentation.setText(medicsData.getPresentation());
+        mGroupFarmaco.setText(medicsData.getGroupFarmaco());
+        mGroupTerapics.setText(medicsData.getGroupTerapics());
+        mRiskPregnancy.setText(medicsData.getRiskPregnancy());
+        mMecanicsAction.setText(medicsData.getMecanicsAction());
+        mCycleLife.setText(medicsData.getCycleLife());
+        mAbsortion.setText(medicsData.getAbsortion());
+        mDistribution.setText(medicsData.getDistribution());
+        mMetabolic.setText(medicsData.getMetabolic());
+        mExcretion.setText(medicsData.getExcretion());
+
+        mIndications.setText(medicsData.getIndications());
+
+        mContradictions.setText(medicsData.getContradictions());
+
+        mCv.setText(medicsData.getCv());
+        mDerma.setText(medicsData.getDerma());
+        mGi.setText(medicsData.getGi());
+        mNeuro.setText(medicsData.getNeuro());
+        mGu.setText(medicsData.getGu());
+        mOrl.setText(medicsData.getOrl());
+        mOthers.setText(medicsData.getOthers());
+
+        mInteractionMedics.setText(medicsData.getInteractionMedics());
+        mCareNursing.setText(medicsData.getCareNursing());
     }
 
     private void showLoadError() {
@@ -183,7 +193,7 @@ public class MedicsDetailFragmentActivity extends Fragment {
         @Override
         protected void onPostExecute(Cursor cursor) {
             if (cursor != null && cursor.moveToLast()) {
-                showLawyer(new Medics(cursor));
+                showLawyer(new MedicsData(cursor));
             } else {
                 showLoadError();
             }

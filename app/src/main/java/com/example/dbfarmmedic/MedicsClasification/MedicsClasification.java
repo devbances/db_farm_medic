@@ -33,7 +33,7 @@ public class MedicsClasification extends AppCompatActivity
         setContentView(R.layout.activity_medics_clasification);
 
         usarToolbar();
-        gridView = (GridView) findViewById(R.id.grid);
+        gridView =  findViewById(R.id.grid);
         adaptador = new MedicsAdapter(this);
         gridView.setAdapter(adaptador);
         gridView.setOnItemClickListener(this);

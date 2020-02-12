@@ -8,6 +8,7 @@ import android.widget.BaseAdapter;
 import android.widget.ImageView;
 import android.widget.TextView;
 
+import com.bumptech.glide.Glide;
 import com.example.dbfarmmedic.R;
 
 public class MedicsAdapter extends BaseAdapter {
@@ -41,8 +42,8 @@ public class MedicsAdapter extends BaseAdapter {
             view = inflater.inflate(R.layout.grid_item_clasification_medics, viewGroup, false);
         }
 
-        ImageView imagenCoche = (ImageView) view.findViewById(R.id.imagen_grupo_medics);
-        TextView nombreCoche = (TextView) view.findViewById(R.id.nombre_grupo_medics);
+        ImageView imagenCoche =  view.findViewById(R.id.imagen_grupo_medics);
+        TextView nombreCoche =  view.findViewById(R.id.nombre_grupo_medics);
 
         final Medics item = getItem(position);
         Glide.with(imagenCoche.getContext())

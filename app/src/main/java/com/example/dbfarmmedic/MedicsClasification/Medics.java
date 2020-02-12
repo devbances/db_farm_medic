@@ -30,10 +30,10 @@ public class Medics {
     }
 
     public static Medics[] ITEMS={
-            new Medics("generales","1", R.drawable.generales),
-            new Medics("Antibioticos","2", R.drawable.antibioticos),
+            new Medics("Antibioticos","1", R.drawable.antibioticos),
+            new Medics("Jarabes","2", R.drawable.jarabes),
             new Medics("Vacunas","3", R.drawable.vacunas),
-            new Medics("Jarabes","4", R.drawable.jarabes),
+
     };
 
 

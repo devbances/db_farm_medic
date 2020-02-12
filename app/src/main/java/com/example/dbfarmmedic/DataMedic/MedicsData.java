@@ -181,6 +181,7 @@ public class MedicsData {
     public String getId() {
         return id;
     }
+
     public String getAvatarUri() {
         return avatarUri;
     }

@@ -14,7 +14,8 @@ import android.widget.TextView;
 import androidx.core.graphics.drawable.RoundedBitmapDrawable;
 import androidx.core.graphics.drawable.RoundedBitmapDrawableFactory;
 
-
+import com.bumptech.glide.Glide;
+import com.bumptech.glide.request.target.BitmapImageViewTarget;
 import com.example.dbfarmmedic.R;
 import static com.example.dbfarmmedic.DataMedic.MedicsContract.MedicsEntry;
 
@@ -32,8 +33,8 @@ public class MedicsCursorAdapter extends CursorAdapter {
     @Override
     public void bindView(View view, final Context context, Cursor cursor) {
 
-        TextView nameText = (TextView) view.findViewById(R.id.tv_name);
-        final ImageView avatarImage = (ImageView) view.findViewById(R.id.iv_avatar);
+        TextView nameText =  view.findViewById(R.id.tv_name);
+        final ImageView avatarImage = view.findViewById(R.id.iv_avatar);
 
         String name = cursor.getString(cursor.getColumnIndex(MedicsEntry.NAME_GENERIC));
         String avatarUri = cursor.getString(cursor.getColumnIndex(MedicsEntry.AVATAR_URI));
@@ -41,8 +42,8 @@ public class MedicsCursorAdapter extends CursorAdapter {
         nameText.setText(name);
         Glide
                 .with(context)
-                .load(Uri.parse("file:///android_asset/" + avatarUri))
                 .asBitmap()
+                .load(Uri.parse("file:///android_asset/" + avatarUri))
                 .error(R.drawable.ic_account_circle)
                 .centerCrop()
                 .into(new BitmapImageViewTarget(avatarImage){
