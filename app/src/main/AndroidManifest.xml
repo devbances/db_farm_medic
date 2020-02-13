@@ -11,7 +11,7 @@
         android:theme="@style/AppTheme">
         <activity
             android:name=".MedicsClasification.MedicsClasification"
-            android:theme="@style/AppTheme.NoActionBar"
+
             android:label="@string/app_name">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
@@ -20,9 +20,15 @@
             </intent-filter>
         </activity>
         <activity
-            android:name=".Medics.MedicsActivity"
-            android:theme="@style/AppTheme.NoActionBar"
-            android:label="@+id/nombre_grupo_medics">
+        android:name=".Medics.MedicsActivity"
+
+        android:label="@+id/nombre_grupo_medics">
+
+    </activity>
+        <activity
+            android:name=".MedicsDetail.MedicsDetailActivity"
+
+            android:label="@string/med">
 
         </activity>
     </application>

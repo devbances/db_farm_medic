@@ -1,62 +1,83 @@
 package com.example.dbfarmmedic.MedicsClasification;
 
-import android.app.Notification;
-import android.content.Intent;
-import android.net.Uri;
 import android.os.Bundle;
 import android.view.Menu;
 import android.view.MenuItem;
-import android.view.View;
-import android.widget.AdapterView;
-import android.widget.GridView;
-import android.widget.Toast;
+
+import androidx.appcompat.app.ActionBarDrawerToggle;
 import androidx.appcompat.widget.Toolbar;
 
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.core.view.GravityCompat;
+import androidx.drawerlayout.widget.DrawerLayout;
 
-import com.example.dbfarmmedic.Medics.MedicsActivity;
 import com.example.dbfarmmedic.R;
+import com.google.android.material.navigation.NavigationView;
+
+
 
 public class MedicsClasification extends AppCompatActivity
-    implements AdapterView.OnItemClickListener{
-    private GridView gridView;
-    private MedicsAdapter adaptador;
-
-    public static final String EXTRA_TIPO_MEDICS_ID = "extra_tipo_medics_id";
-    public static final int REQUEST_UPDATE_DELETE_TIPO_MEDICS = 2;
-
-    //private GoogleApiClient client;
+    implements NavigationView.OnNavigationItemSelectedListener{
 
     @Override
-    protected void onCreate(Bundle savedInstanceState){
+    protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_medics_clasification);
 
-        usarToolbar();
-        gridView =  findViewById(R.id.grid);
-        adaptador = new MedicsAdapter(this);
-        gridView.setAdapter(adaptador);
-        gridView.setOnItemClickListener(this);
-        // ATTENTION: This was auto-generated to implement the App Indexing API.
-        // See https://g.co/AppIndexing/AndroidStudio for more information.
-        //client = new GoogleApiClient.Builder(this).addApi(AppIndex.API).build();
+        Toolbar toolbar =  findViewById(R.id.toolbar);
+        setSupportActionBar(toolbar);
+
+
+        DrawerLayout drawer =  findViewById(R.id.medics_clasification_activity);
+        ActionBarDrawerToggle toggle = new ActionBarDrawerToggle(
+                this, drawer, toolbar, R.string.navigation_drawer_open, R.string.navigation_drawer_close);
+        drawer.setDrawerListener(toggle);
+        toggle.syncState();
+
+        NavigationView navigationView =  findViewById(R.id.nav_view);
+        navigationView.setNavigationItemSelectedListener(this);
+
+
+        MedicsClasificationFragment fragment = (MedicsClasificationFragment)
+                getSupportFragmentManager().findFragmentById(R.id.content_medics_clasification);
+
+        if (fragment == null) {
+            fragment = MedicsClasificationFragment.newInstance();
+            getSupportFragmentManager()
+                    .beginTransaction()
+                    .add(R.id.content_medics_clasification, fragment)
+                    .commit();
+        }
+
     }
 
-    private void usarToolbar() {
-        Toolbar toolbar = findViewById(R.id.toolbar);
-        setSupportActionBar(toolbar);
+    /*Métodos del Navigation*/
+
+    @Override
+    public void onBackPressed() {
+        DrawerLayout drawer =  findViewById(R.id.medics_clasification_activity);
+        if (drawer.isDrawerOpen(GravityCompat.START)) {
+            drawer.closeDrawer(GravityCompat.START);
+        } else {
+            super.onBackPressed();
+        }
     }
 
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
-        getMenuInflater().inflate(R.menu.menu_medics, menu);
+        // Inflate the menu; this adds items to the action bar if it is present.
+        getMenuInflater().inflate(R.menu.main, menu);
         return true;
     }
 
     @Override
     public boolean onOptionsItemSelected(MenuItem item) {
+        // Handle action bar item clicks here. The action bar will
+        // automatically handle clicks on the Home/Up button, so long
+        // as you specify a parent activity in AndroidManifest.xml.
         int id = item.getItemId();
 
+        //noinspection SimplifiableIfStatement
         if (id == R.id.action_settings) {
             return true;
         }
@@ -64,33 +85,31 @@ public class MedicsClasification extends AppCompatActivity
         return super.onOptionsItemSelected(item);
     }
 
+    @SuppressWarnings("StatementWithEmptyBody")
     @Override
-    public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
-        Medics item = (Medics) parent.getItemAtPosition(position);
-        showDetailScreen(item.getIdTipo());
+    public boolean onNavigationItemSelected(MenuItem item) {
+        // Handle navigation view item clicks here.
+        int id = item.getItemId();
+
+        if (id == R.id.nav_camera) {
+            // Handle the camera action
+        } else if (id == R.id.nav_gallery) {
+
+        } else if (id == R.id.nav_slideshow) {
+
+        } else if (id == R.id.nav_manage) {
+
+        } else if (id == R.id.nav_share) {
+
+        } else if (id == R.id.nav_send) {
+
+        }
+
+        DrawerLayout drawer =  findViewById(R.id.medics);
+//        drawer.closeDrawer(GravityCompat.START);
+        return true;
     }
-
-    private void showDetailScreen(String idTipo) {
-        Intent intent = new Intent(this, MedicsActivity.class);
-        intent.putExtra(MedicsClasification.EXTRA_TIPO_MEDICS_ID, idTipo);
-        startActivityForResult(intent, REQUEST_UPDATE_DELETE_TIPO_MEDICS);
-    }
-
-    /* Intent intent = new Intent(this, AlimentosActivity.class);
-        intent.putExtra(AlimentosActivity.EXTRA_ALIMENTO_ID, item.getId());
-
-        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.LOLLIPOP) {
-
-            ActivityOptionsCompat activityOptions =
-                    ActivityOptionsCompat.makeSceneTransitionAnimation(
-                            this,
-                            new Pair<View, String>(view.findViewById(R.id.imagen_alimento),
-                                    AlimentosActivity.VIEW_NAME_HEADER_IMAGE)
-                    );
-
-            ActivityCompat.startActivity(this, intent, activityOptions.toBundle());
-        } else
-            startActivity(intent);*/
 
 
 }
+

@@ -33,12 +33,16 @@ public class MedicsCursorAdapter extends CursorAdapter {
     @Override
     public void bindView(View view, final Context context, Cursor cursor) {
 
+
+        // Referencias UI.
         TextView nameText =  view.findViewById(R.id.tv_name);
         final ImageView avatarImage = view.findViewById(R.id.iv_avatar);
 
+        // Get valores.
         String name = cursor.getString(cursor.getColumnIndex(MedicsEntry.NAME_GENERIC));
         String avatarUri = cursor.getString(cursor.getColumnIndex(MedicsEntry.AVATAR_URI));
 
+        // Setup.
         nameText.setText(name);
         Glide
                 .with(context)

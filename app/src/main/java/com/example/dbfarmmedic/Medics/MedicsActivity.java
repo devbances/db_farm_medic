@@ -8,6 +8,7 @@ import androidx.appcompat.app.AppCompatActivity;
 import androidx.drawerlayout.widget.DrawerLayout;
 
 import com.example.dbfarmmedic.MedicsClasification.MedicsClasification;
+import com.example.dbfarmmedic.MedicsClasification.MedicsClasificationFragment;
 import com.example.dbfarmmedic.R;
 
 
@@ -21,10 +22,21 @@ public class MedicsActivity extends AppCompatActivity {
     protected void onCreate(Bundle saveInstanceState){
         super.onCreate(saveInstanceState);
         setContentView(R.layout.activity_medics);
-        mIdTipo = getIntent().getStringExtra(MedicsClasification.EXTRA_TIPO_MEDICS_ID);
-        setToolbar();
-
-        setTitle("1111111");
+        mIdTipo = getIntent().getStringExtra(MedicsClasificationFragment.EXTRA_TIPO_MEDICS_ID);
+        Toolbar toolbar =  findViewById(R.id.toolbar);
+        setSupportActionBar(toolbar);
+        final ActionBar ab = getSupportActionBar();
+        switch (mIdTipo){
+            case  "1":
+                setTitle("Almidón");
+                break;
+            case  "2":
+                setTitle("Frutas");
+                break;
+            case  "3":
+                setTitle("Verduras");
+                break;
+        }
 
         MedicsFragment fragment = (MedicsFragment)
                 getSupportFragmentManager().findFragmentById(R.id.medics_cner);

@@ -17,8 +17,6 @@ import android.widget.Toast;
 import androidx.fragment.app.Fragment;
 
 import com.bumptech.glide.Glide;
-import com.bumptech.glide.annotation.GlideModule;
-import com.bumptech.glide.module.AppGlideModule;
 
 import com.example.dbfarmmedic.DataMedic.MedicsData;
 import com.example.dbfarmmedic.DataMedic.MedicsDbHelper;
@@ -65,11 +63,11 @@ public class MedicsDetailFragmentActivity extends Fragment {
     }
 
     public  static MedicsDetailFragmentActivity newInstance(String lawyerID){
-        MedicsDetailFragmentActivity fragmentActivity=new MedicsDetailFragmentActivity();
+        MedicsDetailFragmentActivity fragment=new MedicsDetailFragmentActivity();
         Bundle args = new Bundle();
         args.putString(ARG_LAWYER_ID, lawyerID);
-        fragmentActivity.setArguments(args);
-        return fragmentActivity;
+        fragment.setArguments(args);
+        return fragment;
 
     }
 
@@ -89,32 +87,32 @@ public class MedicsDetailFragmentActivity extends Fragment {
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
         View root = inflater.inflate(R.layout.fragment_medics_details, container, false);
-        mCollapsingView = (CollapsingToolbarLayout) getActivity().findViewById(R.id.toolbar_layout);
-        mAvatar = (ImageView) getActivity().findViewById(R.id.iv_avatar);
+        mCollapsingView =  getActivity().findViewById(R.id.toolbar_layout);
+        mAvatar =  getActivity().findViewById(R.id.iv_avatar);
 
         //mNameGeneric = (TextView) root.findViewById(R.id.tv_name);
-        mNameEcomerce = (TextView) root.findViewById(R.id.tv_nameEcomerce);
-        mPresentation = (TextView) root.findViewById(R.id.tv_presentation);
-        mGroupFarmaco = (TextView) root.findViewById(R.id.tv_groupFarmaco);
-        mGroupTerapics = (TextView) root.findViewById(R.id.tv_GroupTerapics);
-        mRiskPregnancy = (TextView) root.findViewById(R.id.tv_RiskPregnancy);
-        mMecanicsAction = (TextView) root.findViewById(R.id.tv_MecanicsAction);
-        mCycleLife = (TextView) root.findViewById(R.id.tv_CycleLife);
-        mAbsortion = (TextView) root.findViewById(R.id.tv_Absortion);
-        mDistribution = (TextView) root.findViewById(R.id.tv_Distribution);
-        mMetabolic = (TextView) root.findViewById(R.id.tv_Metabolic);
-        mExcretion = (TextView) root.findViewById(R.id.tv_Excretion);
-        mIndications = (TextView) root.findViewById(R.id.tv_Indications);
-        mContradictions = (TextView) root.findViewById(R.id.tv_Contradictions);
-        mCv = (TextView) root.findViewById(R.id.tv_cv);
-        mDerma = (TextView) root.findViewById(R.id.tv_derma);
-        mGi = (TextView) root.findViewById(R.id.tv_gi);
-        mNeuro = (TextView) root.findViewById(R.id.tv_Neuro);
-        mGu = (TextView) root.findViewById(R.id.tv_gu);
-        mOrl = (TextView) root.findViewById(R.id.tv_Orl);
-        mOthers = (TextView) root.findViewById(R.id.tv_Others);
-        mInteractionMedics = (TextView) root.findViewById(R.id.tv_InteractionMedics);
-        mCareNursing = (TextView) root.findViewById(R.id.tv_CareNursing);
+        mNameEcomerce =  root.findViewById(R.id.tv_nameEcomerce);
+        mPresentation =  root.findViewById(R.id.tv_presentation);
+        mGroupFarmaco =  root.findViewById(R.id.tv_groupFarmaco);
+        mGroupTerapics =  root.findViewById(R.id.tv_GroupTerapics);
+        mRiskPregnancy =  root.findViewById(R.id.tv_RiskPregnancy);
+        mMecanicsAction =  root.findViewById(R.id.tv_MecanicsAction);
+        mCycleLife =  root.findViewById(R.id.tv_CycleLife);
+        mAbsortion =  root.findViewById(R.id.tv_Absortion);
+        mDistribution =  root.findViewById(R.id.tv_Distribution);
+        mMetabolic =  root.findViewById(R.id.tv_Metabolic);
+        mExcretion =  root.findViewById(R.id.tv_Excretion);
+        mIndications =  root.findViewById(R.id.tv_Indications);
+        mContradictions =  root.findViewById(R.id.tv_Contradictions);
+        mCv =  root.findViewById(R.id.tv_cv);
+        mDerma =  root.findViewById(R.id.tv_derma);
+        mGi =  root.findViewById(R.id.tv_gi);
+        mNeuro =  root.findViewById(R.id.tv_Neuro);
+        mGu =  root.findViewById(R.id.tv_gu);
+        mOrl =  root.findViewById(R.id.tv_Orl);
+        mOthers =  root.findViewById(R.id.tv_Others);
+        mInteractionMedics =  root.findViewById(R.id.tv_InteractionMedics);
+        mCareNursing =  root.findViewById(R.id.tv_CareNursing);
 
 
 
