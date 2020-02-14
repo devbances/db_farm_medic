@@ -1,5 +1,5 @@
 <resources>
-    <string name="app_name">db farm medic</string>
+<string name="app_name">FÁRMACO ENFERMERÍA</string>
     <string name="med">APP Medicamentos</string>
     <string name="creditos">Créditos</string>
 
@@ -15,6 +15,13 @@
         "The material is grounded in tactile reality, inspired by the study of paper and ink, yet "
         "technologically advanced and open to imagination and magic.\n
     </string>
+
+    <string name="menu_home">Home</string>
+    <string name="menu_gallery">Gallery</string>
+    <string name="menu_slideshow">Slideshow</string>
+    <string name="menu_tools">Tools</string>
+    <string name="menu_share">Share</string>
+    <string name="menu_send">Send</string>
 
     <string name="titulo_actividad_detalle">Actividad De Detalle</string>
 

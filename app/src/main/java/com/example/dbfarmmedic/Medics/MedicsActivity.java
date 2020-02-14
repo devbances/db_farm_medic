@@ -28,13 +28,19 @@ public class MedicsActivity extends AppCompatActivity {
         final ActionBar ab = getSupportActionBar();
         switch (mIdTipo){
             case  "1":
-                setTitle("Almidón");
+                setTitle("MACRÓLIDOS ");
                 break;
             case  "2":
-                setTitle("Frutas");
+                setTitle("QUINOLONAS");
                 break;
             case  "3":
-                setTitle("Verduras");
+                setTitle("SULFAMIDAS Y DERIVADOS");
+                break;
+            case  "4":
+                setTitle("TETRACICLINAS");
+                break;
+            case  "5":
+                setTitle("LINCOSAMIDAS");
                 break;
         }
 

@@ -8,26 +8,15 @@
 
     <TableRow>
         <TextView
-            android:layout_column="0"
+
+
             android:padding="3dp"
-            android:text="NOMBRE GEN"
+            android:text="Nombre Comercial"
             android:textColor="@color/colorPrimary" />
-        <TextView
-            android:layout_column="2"
-            android:padding="3dp"
-            android:gravity="left"
-            android:id="@+id/tv_name"
-            android:textAppearance="@style/TextAppearance.AppCompat.Body1"
-            tools:text="@string/large_text"/>
     </TableRow>
     <TableRow>
         <TextView
-            android:layout_column="0"
-            android:padding="3dp"
-            android:text="NOMBRE COMERCIAL"
-            android:textColor="@color/colorPrimary" />
-        <TextView
-            android:layout_column="2"
+
             android:padding="3dp"
             android:gravity="left"
             android:id="@+id/tv_nameEcomerce"
@@ -38,7 +27,7 @@
         <TextView
             android:layout_column="0"
             android:padding="3dp"
-            android:text="PRESENTACION"
+            android:text="Presentación"
             android:textColor="@color/colorPrimary" />
         <TextView
             android:layout_column="2"
@@ -134,12 +123,14 @@
     </TableRow>
     <TableRow>
         <TextView
-            android:layout_column="0"
+
             android:padding="3dp"
-            android:text="DISTRIBUCION"
+            android:text="Distribución"
             android:textColor="@color/colorPrimary" />
+    </TableRow>
+    <TableRow>
         <TextView
-            android:layout_column="2"
+
             android:padding="3dp"
             android:gravity="left"
             android:id="@+id/tv_Distribution"

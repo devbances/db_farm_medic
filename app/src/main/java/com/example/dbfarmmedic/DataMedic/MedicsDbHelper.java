@@ -57,8 +57,8 @@ public class MedicsDbHelper extends SQLiteOpenHelper {
     }
 
     private void mockData(SQLiteDatabase sqLiteDatabase){
-        mockLawyer(sqLiteDatabase, new MedicsData("1", "antibioticos.jpg","333333","44444","55555", "6666666","777777","8888888","999999", "10",
-                                                    "oooooo11","eeeeee12","eeeee13", "eeeeee14","eeeeeeee15","eeeeeeooooo16","qqqqq17", "ooooooo18","oooooo19","oooooo20",
+        mockLawyer(sqLiteDatabase, new MedicsData("1", "antibioticos.jpg","Azitromicina","ZITROMAX, TRI AZIT","AZITROMICINA: Cáp. 250mg, Comp. 500mg, Susp. Oral 1g, Susp. Oral 200mg/5ml, Susp. Oral 250mg/5ml, Susp. Oral 500mg/5ml, vial 500mg.", "Macrólido azálido.","Antibiótico","B","Se une a la subunidad 50S de los ribosomas 70S de los mircoorganismos bacterianos sensibles, inhibiendo la síntesis de proteínas. Es bactericida frente a S. pyogenes, Spneumoniae, y H. influenzae. Resulta bacteriostático con estafilococos y aerobios Gram negativos.", "Dosis única 11 a 14 h, dosis múltiple 2 a 4 días.",
+                                                    "Rápida en el TGI, los alimentos disminuyen su absorción y su concentración sérica máxima en un 52%.","Amplia y alcanza el estado de equilibrio en 5 a 7 días con una concentración mínima. Se distribuye intracelularmente a nivel de fagocitos fibroblastos, de esta manera es transportado al sitio de infección donde se libera gradualmente. Se encuentra en mayores concentraciones en pulmón, esputo, amígdalas y cérvix. Se difunde en hueso, fluido seminal, próstata, ovarios, útero, trompas, estómago, hígado y versícula. Tiene concentraciones bajas en el LCR. Unión a proteínas plasmáticas 7 a 50%.","eeeee13", "eeeeee14","eeeeeeee15","eeeeeeooooo16","qqqqq17", "ooooooo18","oooooo19","oooooo20",
                                                     "21", "22","23","24","25"));
 
         //mockLawyer(sqLiteDatabase, new MedicsData("Arroz Cocido 1 Porción","1","62 gr 1/2 Taza Casera","71.20 Kcal","1.49 gr", "0.06 gr","15.62 gr","0.06 gr","ND gr","A_arroz_1pc.jpg"));
