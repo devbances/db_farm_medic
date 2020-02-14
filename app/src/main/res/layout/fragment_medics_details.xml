@@ -69,7 +69,7 @@
         <TextView
             android:layout_column="0"
             android:padding="3dp"
-            android:text="RIESGO EMBARAZO"
+            android:text="Riesgo de Embarazo"
             android:textColor="@color/colorPrimary" />
         <TextView
             android:layout_column="2"
@@ -83,7 +83,7 @@
         <TextView
             android:layout_column="0"
             android:padding="3dp"
-            android:text="MECANISMO ACCION"
+            android:text="Mecanismo de Acción"
             android:textColor="@color/colorPrimary" />
         <TextView
             android:layout_column="2"
@@ -141,7 +141,7 @@
         <TextView
             android:layout_column="0"
             android:padding="3dp"
-            android:text="METABOLISMO"
+            android:text="Metabolismo"
             android:textColor="@color/colorPrimary" />
         <TextView
             android:layout_column="2"
