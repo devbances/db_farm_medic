@@ -2,322 +2,446 @@
 <TableLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-    android:layout_height="match_parent"
+    android:layout_height="wrap_content"
     android:padding="10dp"
-    android:stretchColumns="1">
+    android:stretchColumns="0"
+    android:shrinkColumns="*">
 
     <TableRow>
+
         <TextView
-
-
             android:padding="3dp"
             android:text="Nombre Comercial"
             android:textColor="@color/colorPrimary" />
     </TableRow>
-    <TableRow>
-        <TextView
 
-            android:padding="3dp"
-            android:gravity="left"
-            android:id="@+id/tv_nameEcomerce"
-            android:textAppearance="@style/TextAppearance.AppCompat.Body1"
-            tools:text="@string/large_text"/>
-    </TableRow>
     <TableRow>
+
         <TextView
-            android:layout_column="0"
+            android:id="@+id/tv_nameEcomerce"
+            android:gravity="left"
+            android:padding="3dp"
+            android:textAppearance="@style/TextAppearance.AppCompat.Body1"
+            tools:text="@string/large_text" />
+    </TableRow>
+
+    <TableRow>
+
+        <TextView
             android:padding="3dp"
             android:text="Presentación"
             android:textColor="@color/colorPrimary" />
+    </TableRow>
+
+    <TableRow>
+
         <TextView
-            android:layout_column="2"
-            android:padding="3dp"
-            android:gravity="left"
+
             android:id="@+id/tv_presentation"
-            android:textAppearance="@style/TextAppearance.AppCompat.Body1"
-            tools:text="@string/large_text"/>
-    </TableRow>
-    <TableRow>
-        <TextView
-            android:layout_column="0"
-            android:padding="3dp"
-            android:text="GRUPO FARMACO"
-            android:textColor="@color/colorPrimary" />
-        <TextView
-            android:layout_column="2"
-            android:padding="3dp"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
             android:gravity="left"
+            android:padding="3dp"
+            android:textAppearance="@style/TextAppearance.AppCompat.Body1"
+            tools:text="@string/name_pagrapho" />
+    </TableRow>
+
+    <TableRow>
+
+        <TextView
+
+            android:padding="3dp"
+            android:text="Grupo Farmacológico"
+            android:textColor="@color/colorPrimary" />
+    </TableRow>
+
+    <TableRow>
+
+        <TextView
+
             android:id="@+id/tv_groupFarmaco"
-            android:textAppearance="@style/TextAppearance.AppCompat.Body1"
-            tools:text="@string/large_text"/>
-    </TableRow>
-    <TableRow>
-        <TextView
-            android:layout_column="0"
-            android:padding="3dp"
-            android:text="GRUPO TERAPIA"
-            android:textColor="@color/colorPrimary" />
-        <TextView
-            android:layout_column="2"
-            android:padding="3dp"
             android:gravity="left"
-            android:id="@+id/tv_GroupTerapics"
+            android:padding="3dp"
             android:textAppearance="@style/TextAppearance.AppCompat.Body1"
-            tools:text="@string/large_text"/>
+            tools:text="@string/large_text" />
+
     </TableRow>
+
     <TableRow>
+
         <TextView
-            android:layout_column="0"
+
+            android:padding="3dp"
+            android:text="Grupo Terapéutico"
+            android:textColor="@color/colorPrimary" />
+    </TableRow>
+
+    <TableRow>
+
+        <TextView
+
+            android:id="@+id/tv_GroupTerapics"
+            android:gravity="left"
+            android:padding="3dp"
+            android:textAppearance="@style/TextAppearance.AppCompat.Body1"
+            tools:text="@string/large_text" />
+    </TableRow>
+
+    <TableRow>
+
+        <TextView
+
             android:padding="3dp"
             android:text="Riesgo de Embarazo"
             android:textColor="@color/colorPrimary" />
-        <TextView
-            android:layout_column="2"
-            android:padding="3dp"
-            android:gravity="left"
-            android:id="@+id/tv_RiskPregnancy"
-            android:textAppearance="@style/TextAppearance.AppCompat.Body1"
-            tools:text="@string/large_text"/>
     </TableRow>
+
     <TableRow>
+
         <TextView
-            android:layout_column="0"
+
+            android:id="@+id/tv_RiskPregnancy"
+            android:gravity="left"
+            android:padding="3dp"
+            android:textAppearance="@style/TextAppearance.AppCompat.Body1"
+            tools:text="@string/large_text" />
+    </TableRow>
+
+    <TableRow>
+
+        <TextView
+
             android:padding="3dp"
             android:text="Mecanismo de Acción"
             android:textColor="@color/colorPrimary" />
-        <TextView
-            android:layout_column="2"
-            android:padding="3dp"
-            android:gravity="left"
-            android:id="@+id/tv_MecanicsAction"
-            android:textAppearance="@style/TextAppearance.AppCompat.Body1"
-            tools:text="@string/large_text"/>
     </TableRow>
+
     <TableRow>
-        <TextView
-            android:layout_column="0"
-            android:padding="3dp"
-            android:text="CICLO DE VIDA"
-            android:textColor="@color/colorPrimary" />
-        <TextView
-            android:layout_column="2"
-            android:padding="3dp"
-            android:gravity="left"
-            android:id="@+id/tv_CycleLife"
-            android:textAppearance="@style/TextAppearance.AppCompat.Body1"
-            tools:text="@string/large_text"/>
-    </TableRow>
-    <TableRow>
-        <TextView
-            android:layout_column="0"
-            android:padding="3dp"
-            android:text="ABSORCION"
-            android:textColor="@color/colorPrimary" />
-        <TextView
-            android:layout_column="2"
-            android:padding="3dp"
-            android:gravity="left"
-            android:id="@+id/tv_Absortion"
-            android:textAppearance="@style/TextAppearance.AppCompat.Body1"
-            tools:text="@string/large_text"/>
-    </TableRow>
-    <TableRow>
+
         <TextView
 
+            android:id="@+id/tv_MecanicsAction"
+            android:gravity="left"
+            android:padding="3dp"
+            android:textAppearance="@style/TextAppearance.AppCompat.Body1"
+            tools:text="@string/large_text" />
+    </TableRow>
+
+    <TableRow>
+
+        <TextView
+
+            android:padding="3dp"
+            android:text="Tiempo de vida media"
+            android:textColor="@color/colorPrimary" />
+    </TableRow>
+
+    <TableRow>
+
+        <TextView
+
+            android:id="@+id/tv_CycleLife"
+            android:gravity="left"
+            android:padding="3dp"
+            android:textAppearance="@style/TextAppearance.AppCompat.Body1"
+            tools:text="@string/large_text" />
+    </TableRow>
+
+    <TableRow>
+
+        <TextView
+
+            android:padding="3dp"
+            android:text="Absorción"
+            android:textColor="@color/colorPrimary" />
+    </TableRow>
+
+    <TableRow>
+
+        <TextView
+
+            android:id="@+id/tv_Absortion"
+            android:gravity="left"
+            android:padding="3dp"
+            android:textAppearance="@style/TextAppearance.AppCompat.Body1" />
+    </TableRow>
+
+    <TableRow>
+
+        <TextView
             android:padding="3dp"
             android:text="Distribución"
             android:textColor="@color/colorPrimary" />
     </TableRow>
+
     <TableRow>
+
+        <TextView
+
+            android:id="@+id/tv_Distribution"
+            android:gravity="left"
+            android:padding="3dp"
+            android:textAppearance="@style/TextAppearance.AppCompat.Body1"
+            tools:text="@string/large_text" />
+    </TableRow>
+
+    <TableRow>
+
         <TextView
 
             android:padding="3dp"
-            android:gravity="left"
-            android:id="@+id/tv_Distribution"
-            android:textAppearance="@style/TextAppearance.AppCompat.Body1"
-            tools:text="@string/large_text"/>
-    </TableRow>
-    <TableRow>
-        <TextView
-            android:layout_column="0"
-            android:padding="3dp"
             android:text="Metabolismo"
             android:textColor="@color/colorPrimary" />
+    </TableRow>
+
+    <TableRow>
+
         <TextView
-            android:layout_column="2"
-            android:padding="3dp"
-            android:gravity="left"
+
             android:id="@+id/tv_Metabolic"
-            android:textAppearance="@style/TextAppearance.AppCompat.Body1"
-            tools:text="@string/large_text"/>
-    </TableRow>
-    <TableRow>
-        <TextView
-            android:layout_column="0"
-            android:padding="3dp"
-            android:text="EXCRESION"
-            android:textColor="@color/colorPrimary" />
-        <TextView
-            android:layout_column="2"
-            android:padding="3dp"
             android:gravity="left"
-            android:id="@+id/tv_Excretion"
+            android:padding="3dp"
             android:textAppearance="@style/TextAppearance.AppCompat.Body1"
-            tools:text="@string/large_text"/>
+            tools:text="@string/large_text" />
     </TableRow>
+
     <TableRow>
+
         <TextView
-            android:layout_column="0"
+
+            android:padding="3dp"
+            android:text="Excreción"
+            android:textColor="@color/colorPrimary" />
+    </TableRow>
+
+    <TableRow>
+
+        <TextView
+
+            android:id="@+id/tv_Excretion"
+            android:gravity="left"
+            android:padding="3dp"
+            android:textAppearance="@style/TextAppearance.AppCompat.Body1"
+            tools:text="@string/large_text" />
+    </TableRow>
+
+    <TableRow>
+
+        <TextView
+
             android:padding="3dp"
             android:text="Indicaciones"
             android:textColor="@color/colorPrimary" />
+    </TableRow>
+
+    <TableRow>
+
         <TextView
-            android:layout_column="2"
-            android:padding="3dp"
-            android:gravity="left"
+
             android:id="@+id/tv_Indications"
-            android:textAppearance="@style/TextAppearance.AppCompat.Body1"
-            tools:text="@string/large_text"/>
-    </TableRow>
-    <TableRow>
-        <TextView
-            android:layout_column="0"
-            android:padding="3dp"
-            android:text="CONTRADICCIONES"
-            android:textColor="@color/colorPrimary" />
-        <TextView
-            android:layout_column="2"
-            android:padding="3dp"
             android:gravity="left"
-            android:id="@+id/tv_Contradictions"
+            android:padding="3dp"
             android:textAppearance="@style/TextAppearance.AppCompat.Body1"
-            tools:text="@string/large_text"/>
+            tools:text="@string/large_text" />
     </TableRow>
+
     <TableRow>
+
         <TextView
-            android:layout_column="0"
+
+            android:padding="3dp"
+            android:text="Contraindicaciones"
+            android:textColor="@color/colorPrimary" />
+    </TableRow>
+
+    <TableRow>
+
+        <TextView
+
+            android:id="@+id/tv_Contradictions"
+            android:gravity="left"
+            android:padding="3dp"
+            android:textAppearance="@style/TextAppearance.AppCompat.Body1"
+            tools:text="@string/large_text" />
+    </TableRow>
+
+    <TableRow>
+
+        <TextView
+
             android:padding="3dp"
             android:text="CV"
             android:textColor="@color/colorPrimary" />
-        <TextView
-            android:layout_column="2"
-            android:padding="3dp"
-            android:gravity="left"
-            android:id="@+id/tv_cv"
-            android:textAppearance="@style/TextAppearance.AppCompat.Body1"
-            tools:text="@string/large_text"/>
     </TableRow>
+
     <TableRow>
+
         <TextView
-            android:layout_column="0"
+
+            android:id="@+id/tv_cv"
+            android:gravity="left"
+            android:padding="3dp"
+            android:textAppearance="@style/TextAppearance.AppCompat.Body1"
+            tools:text="@string/large_text" />
+    </TableRow>
+
+    <TableRow>
+
+        <TextView
+
             android:padding="3dp"
             android:text="DERMA"
             android:textColor="@color/colorPrimary" />
-        <TextView
-            android:layout_column="2"
-            android:padding="3dp"
-            android:gravity="left"
-            android:id="@+id/tv_derma"
-            android:textAppearance="@style/TextAppearance.AppCompat.Body1"
-            tools:text="@string/large_text"/>
     </TableRow>
+
     <TableRow>
+
         <TextView
-            android:layout_column="0"
+
+            android:id="@+id/tv_derma"
+            android:gravity="left"
+            android:padding="3dp"
+            android:textAppearance="@style/TextAppearance.AppCompat.Body1"
+            tools:text="@string/large_text" />
+    </TableRow>
+
+    <TableRow>
+
+        <TextView
+
             android:padding="3dp"
             android:text="GI"
             android:textColor="@color/colorPrimary" />
-        <TextView
-            android:layout_column="2"
-            android:padding="3dp"
-            android:gravity="left"
-            android:id="@+id/tv_gi"
-            android:textAppearance="@style/TextAppearance.AppCompat.Body1"
-            tools:text="@string/large_text"/>
     </TableRow>
+
     <TableRow>
+
         <TextView
-            android:layout_column="0"
+
+            android:id="@+id/tv_gi"
+            android:gravity="left"
+            android:padding="3dp"
+            android:textAppearance="@style/TextAppearance.AppCompat.Body1"
+            tools:text="@string/large_text" />
+    </TableRow>
+
+    <TableRow>
+
+        <TextView
+
             android:padding="3dp"
             android:text="NEURO"
             android:textColor="@color/colorPrimary" />
-        <TextView
-            android:layout_column="2"
-            android:padding="3dp"
-            android:gravity="left"
-            android:id="@+id/tv_Neuro"
-            android:textAppearance="@style/TextAppearance.AppCompat.Body1"
-            tools:text="@string/large_text"/>
     </TableRow>
+
     <TableRow>
+
         <TextView
-            android:layout_column="0"
+
+            android:id="@+id/tv_Neuro"
+            android:gravity="left"
+            android:padding="3dp"
+            android:textAppearance="@style/TextAppearance.AppCompat.Body1"
+            tools:text="@string/large_text" />
+    </TableRow>
+
+    <TableRow>
+
+        <TextView
+
             android:padding="3dp"
             android:text="GU"
             android:textColor="@color/colorPrimary" />
-        <TextView
-            android:layout_column="2"
-            android:padding="3dp"
-            android:gravity="left"
-            android:id="@+id/tv_gu"
-            android:textAppearance="@style/TextAppearance.AppCompat.Body1"
-            tools:text="@string/large_text"/>
     </TableRow>
+
     <TableRow>
+
         <TextView
-            android:layout_column="0"
+
+            android:id="@+id/tv_gu"
+            android:gravity="left"
+            android:padding="3dp"
+            android:textAppearance="@style/TextAppearance.AppCompat.Body1"
+            tools:text="@string/large_text" />
+    </TableRow>
+
+    <TableRow>
+
+        <TextView
+
             android:padding="3dp"
             android:text="ORL"
             android:textColor="@color/colorPrimary" />
+    </TableRow>
+
+    <TableRow>
+
         <TextView
-            android:layout_column="2"
-            android:padding="3dp"
-            android:gravity="left"
+
             android:id="@+id/tv_Orl"
-            android:textAppearance="@style/TextAppearance.AppCompat.Body1"
-            tools:text="@string/large_text"/>
-    </TableRow>
-    <TableRow>
-        <TextView
-            android:layout_column="0"
-            android:padding="3dp"
-            android:text="OTROS"
-            android:textColor="@color/colorPrimary" />
-        <TextView
-            android:layout_column="2"
-            android:padding="3dp"
             android:gravity="left"
+            android:padding="3dp"
+            android:textAppearance="@style/TextAppearance.AppCompat.Body1"
+            tools:text="@string/large_text" />
+    </TableRow>
+
+    <TableRow>
+
+        <TextView
+
+            android:padding="3dp"
+            android:text="Otros"
+            android:textColor="@color/colorPrimary" />
+    </TableRow>
+
+    <TableRow>
+
+        <TextView
+
             android:id="@+id/tv_Others"
-            android:textAppearance="@style/TextAppearance.AppCompat.Body1"
-            tools:text="@string/large_text"/>
-    </TableRow>
-    <TableRow>
-        <TextView
-            android:layout_column="0"
-            android:padding="3dp"
-            android:text="INTERACCION MEDICA"
-            android:textColor="@color/colorPrimary" />
-        <TextView
-            android:layout_column="2"
-            android:padding="3dp"
             android:gravity="left"
+            android:padding="3dp"
+            android:textAppearance="@style/TextAppearance.AppCompat.Body1"
+            tools:text="@string/large_text" />
+    </TableRow>
+
+    <TableRow>
+
+        <TextView
+
+            android:padding="3dp"
+            android:text="Interacciones medicamentosas"
+            android:textColor="@color/colorPrimary" />
+    </TableRow>
+
+    <TableRow>
+
+        <TextView
             android:id="@+id/tv_InteractionMedics"
-            android:textAppearance="@style/TextAppearance.AppCompat.Body1"
-            tools:text="@string/large_text"/>
-    </TableRow>
-    <TableRow>
-        <TextView
-            android:layout_column="0"
-            android:padding="3dp"
-            android:text="ENFERMERA S"
-            android:textColor="@color/colorPrimary" />
-        <TextView
-            android:layout_column="2"
-            android:padding="3dp"
             android:gravity="left"
-            android:id="@+id/tv_CareNursing"
+            android:padding="3dp"
             android:textAppearance="@style/TextAppearance.AppCompat.Body1"
-            tools:text="@string/large_text"/>
+            tools:text="@string/large_text" />
+    </TableRow>
+
+    <TableRow>
+
+        <TextView
+
+            android:padding="3dp"
+            android:text="Cuidados de enfermería"
+            android:textColor="@color/colorPrimary" />
+    </TableRow>
+
+    <TableRow>
+
+        <TextView
+
+            android:id="@+id/tv_CareNursing"
+            android:gravity="left"
+            android:padding="3dp"
+            android:textAppearance="@style/TextAppearance.AppCompat.Body1"
+            tools:text="@string/large_text" />
     </TableRow>
 
 

@@ -16,6 +16,15 @@
         "technologically advanced and open to imagination and magic.\n
     </string>
 
+    <string name="name_pagrapho">
+        Morbi posuere lorem nec elit dapibus, vitae accumsan mauris pellentesque.
+        Vestibulum a lobortis mi. Vestibulum lacinia molestie semper. Pellentesque
+        ultrices arcu lacus, interdum mollis nibh convallis ut. Aliquam sagittis
+        sem a lacus gravida, eu accumsan purus volutpat. Donec tempus, est id
+        tristique consectetur, lacus ligula dignissim turpis, cursus commodo turpis
+        libero in purus. Phasellus tempus gravida tempor.
+    </string>
+
     <string name="menu_home">Home</string>
     <string name="menu_gallery">Gallery</string>
     <string name="menu_slideshow">Slideshow</string>
