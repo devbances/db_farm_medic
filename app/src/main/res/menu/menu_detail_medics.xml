@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context="com.example.dbfarmmedic.MedicsDetail.MedicsDetailActivity">
+
+
+        <item
+            android:id="@+id/ic_favorite"
+            android:icon="@drawable/ic_action_favorite"
+            android:title="Favorito"
+            app:showAsAction="ifRoom"/>
+        <item
+            android:id="@+id/ic_share"
+            android:icon="@drawable/ic_action_share"
+            android:title="Compartir"
+            app:showAsAction="ifRoom"/>
+        <item
+            android:id="@+id/ic_like"
+            android:icon="@drawable/ic_action_like"
+            android:title="Like"
+            app:showAsAction="ifRoom"/>
+
+</menu>

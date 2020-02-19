@@ -28,6 +28,7 @@ public class MedicsDetailActivity  extends AppCompatActivity {
                     .add(R.id.lawyer_detail_cner, fragment)
                     .commit();
         }
+        
 
 
     }
