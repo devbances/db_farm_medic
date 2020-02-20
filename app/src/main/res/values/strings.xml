@@ -2,11 +2,20 @@
 <string name="app_name">FÁRMACO ENFERMERÍA</string>
     <string name="med">APP Medicamentos</string>
     <string name="creditos">Créditos</string>
+    <string name="help">Ayuda</string>
+    <string name="politics_privacy">Política de Privacidad</string>
+
+    <string name="menu_home">Home</string>
+    <string name="menu_gallery">Gallery</string>
+    <string name="menu_slideshow">Slideshow</string>
+    <string name="menu_tools">Tools</string>
+    <string name="menu_share">Compartir</string>
+    <string name="menu_send">Contacto</string>
 
     <string name="nav_header_desc">Navigation header</string>
 
     <string name="action_add">Añadir</string>
-    <string name="action_favorite">Marcar Favorito</string>
+    <string name="action_favorite">Favoritos</string>
     <string name="action_search">Buscar</string>
 
 
@@ -29,12 +38,6 @@
         libero in purus. Phasellus tempus gravida tempor.
     </string>
 
-    <string name="menu_home">Home</string>
-    <string name="menu_gallery">Gallery</string>
-    <string name="menu_slideshow">Slideshow</string>
-    <string name="menu_tools">Tools</string>
-    <string name="menu_share">Share</string>
-    <string name="menu_send">Send</string>
 
     <string name="titulo_actividad_detalle">Actividad De Detalle</string>
 
