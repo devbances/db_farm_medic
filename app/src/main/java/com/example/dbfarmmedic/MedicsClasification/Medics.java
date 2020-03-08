@@ -33,9 +33,9 @@ public class Medics {
             new Medics("MACRÓLIDOS ","1", R.drawable.antibioticos),
             new Medics("QUINOLONAS","2", R.drawable.jarabes),
             new Medics("SULFAMIDAS","3", R.drawable.vacunas),
-            new Medics("TETRACICLINAS","3", R.drawable.vacunas),
-            new Medics("LINCOSAMIDAS","3", R.drawable.vacunas),
-            new Medics("GLICOPÉPTIDOS","3", R.drawable.vacunas),
+            new Medics("TETRACICLINAS","4", R.drawable.vacunas),
+            new Medics("LINCOSAMIDAS","5", R.drawable.vacunas),
+            new Medics("GLICOPÉPTIDOS","6", R.drawable.vacunas),
 
     };
 
