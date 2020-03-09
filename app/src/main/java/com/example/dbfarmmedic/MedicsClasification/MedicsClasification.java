@@ -1,10 +1,18 @@
 package com.example.dbfarmmedic.MedicsClasification;
 
+import android.annotation.SuppressLint;
+import android.content.Context;
+import android.content.DialogInterface;
+import android.content.Intent;
+import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.view.Menu;
 import android.view.MenuItem;
+import android.widget.EditText;
+import android.widget.TextView;
 
 import androidx.appcompat.app.ActionBarDrawerToggle;
+import androidx.appcompat.app.AlertDialog;
 import androidx.appcompat.widget.Toolbar;
 
 import androidx.appcompat.app.AppCompatActivity;
@@ -12,17 +20,20 @@ import androidx.core.view.GravityCompat;
 import androidx.drawerlayout.widget.DrawerLayout;
 
 import com.example.dbfarmmedic.R;
+import com.example.dbfarmmedic.login.LogeoActivity;
 import com.google.android.material.navigation.NavigationView;
 
 
 
 public class MedicsClasification extends AppCompatActivity
     implements NavigationView.OnNavigationItemSelectedListener{
-
+    TextView nombre_user;
+    @SuppressLint("WrongViewCast")
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_medics_clasification);
+
 
         Toolbar toolbar =  findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
@@ -103,6 +114,8 @@ public class MedicsClasification extends AppCompatActivity
 
         } else if (id == R.id.nav_send) {
 
+        } else if (id == R.id.nav_out) {
+            mostrarDialogo("Desea salir","");
         }
 
         DrawerLayout drawer =  findViewById(R.id.medics);
@@ -110,6 +123,51 @@ public class MedicsClasification extends AppCompatActivity
         return true;
     }
 
+    private void eliminarPreferencias() {
 
+        SharedPreferences prefs = getSharedPreferences("D12346AD546AS5D4ASDA65ASD+A6S5D+A6SD5+A6A6+SD5A+65D", Context.MODE_PRIVATE);
+
+        SharedPreferences.Editor editor = prefs.edit();
+
+        editor.putString("user", "");
+        editor.putString("pass", "");
+
+        editor.commit();
+    }
+    private void mostrarDialogo(String titulo, String mensaje)
+    {
+        // Paso 1: Crear el dialogo
+
+        AlertDialog.Builder builder = new AlertDialog.Builder(this
+        );
+
+        builder.setTitle(titulo)
+                .setMessage(mensaje)
+                .setIcon(
+                        getResources().getDrawable(
+                                android.R.drawable.ic_dialog_info))
+                .setPositiveButton("Aceptar", new DialogInterface.OnClickListener() {
+                    @Override
+                    public void onClick(DialogInterface dialog, int which) {
+                        dialog.cancel();
+                        eliminarPreferencias();
+                        Intent intent = new Intent(getApplicationContext(), LogeoActivity.class);
+                        startActivity(intent);
+                        finish();
+                    }
+                })
+                .setNegativeButton("Cancelar", new DialogInterface.OnClickListener() {
+                    @Override
+                    public void onClick(DialogInterface dialog, int which) {
+                        dialog.cancel();
+                    }
+                });
+
+        // Paso 2: Lanzar el dialogo
+
+        AlertDialog alert = builder.create();
+
+        alert.show();
+    }
 }
 
